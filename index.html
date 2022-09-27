@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/68dd6c1258.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <header class="container">
+      <h2 style="text-align: center; color: #d8d8d8; letter-spacing: 3px">
+        To Do List
+      </h2>
+      <form class="add" id="form">
+        <input
+          type="text"
+          id="new-task-input"
+          placeholder="what do you have planned for today?"
+        />
+
+        <input type="submit" id="new-task-submit" value="add task" />
+      </form>
+    </header>
+
+    <main>
+      <ul id="group-list">
+        <li class="list-group" id="list">
+          Learning to make a to-do app
+          <span>
+            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-trash-can"></i>
+          </span>
+        </li>
+      </ul>
+
+      <ul id="group-list">
+        <li class="list-group" id="list">
+          Still learning
+          <span>
+            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-trash-can"></i>
+          </span>
+        </li>
+      </ul>
+
+      <ul id="group-list">
+        <li class="list-group" id="list">
+          still doing what i'm doing
+          <span>
+            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-trash-can"></i>
+          </span>
+        </li>
+      </ul>
+      <ul id="group-list">
+        <li class="list-group" id="list">
+          going through some shitty bug
+          <span>
+            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-trash-can"></i>
+          </span>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

@@ -1,28 +1,25 @@
 const form = document.querySelector("form");
-const addTask = document.querySelector("#new-task-submit");
-const inputValue = document.querySelector("#new-task-input").value;
+const inputValue = document.querySelector("#new-task-input");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const todo = inputValue.trim();
-
-  // if (inputValue.length != 0) {
-  //   console.log("success frr!!");
-  // } else {
-  //   alert("Please input a task!");
-  //   // generateTemplate(todo);
-  // }
+  const todo = inputValue.value.trim(); //trim method trims off the white spaces before and after the value in the input
+  if (todo.length !== 0) {
+    generateTemplate(todo);
+    form.reset(); //reset() clears data in the input form after submission
+    console.log("success"); //helps me check success of each input
+  } else {
+    alert("Please input a task!");
+  }
 });
 
-// const generateTemplate = (todo) => {
-//   let main = document.querySelector("main");
-//   let ul = document.createElement("ul");
-//   let li = document.createElement("li");
+const generateTemplate = (todo) => {
+  const main = document.querySelector("main");
+  const ul = document.createElement("ul");
+  ul.classList.add("group-list");
 
-//   li.classList.add("list-group");
-//   li.append(`<li>${todo}</li>`);
+  const html = `<li class="list-group">${todo}</li>`;
 
-//   ul.classList.add("group-list");
-//   ul.appendChild(li);
-//   main.appendChild(ul);
-// };
+  ul.innerHTML += html;
+  main.appendChild(ul);
+};

@@ -68,22 +68,22 @@ input::placeholder{
 
 main{
     height: 100%;
-    background-color: rgb(171, 119, 75);
 }
 
-#group-list{
+.group-list{
     padding: .2rem .6rem;
 }
 
-#list{
+.list-group{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
-    background-color: rgb(189, 139, 188);
-    border-radius: 10px;
+    padding: 0 .5rem;
+    background-color: rgb(207, 167, 206);
+    border-radius: 5px;
     margin: .3rem;
     list-style-type: none;
+    font-size: smaller;
 }
 
 span i{
@@ -98,3 +98,10 @@ span i{
 .fa-trash-can{
     color: crimson;
 }
+
+/* @media screen and (min-width: 768px) {
+    .container{
+        width: 50vh;
+    }
+    
+} */

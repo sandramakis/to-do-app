@@ -86,18 +86,36 @@ main{
     font-size: smaller;
 }
 
+.list-group  .done{
+    text-decoration: line-through;
+}
+
 span i{
     cursor: pointer;
-    padding: 0 4px;
+    padding: 0 15px;
+    font-size: 15px;
 }
 
 .fa-check{
     color: green;
+    font-size: 18px;
 }
 
 .fa-trash-can{
     color: crimson;
 }
+
+.fa-check:hover,
+.fa-trash-can:hover{
+    opacity: .6;
+    transition: .3s;
+}
+
+.fa-check:active,
+.fa-trash-can:active{
+    opacity: .3;
+}
+
 
 /* @media screen and (min-width: 768px) {
     .container{

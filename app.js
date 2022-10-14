@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
   if (todo.length !== 0) {
     generateTemplate(todo);
     form.reset(); //reset() clears data in the input form after submission
-    console.log("success"); //helps me check success of each input
+    console.log(todo); //outputs the input value to the console
   } else {
     alert("Please input a task!");
   }
@@ -18,8 +18,16 @@ const generateTemplate = (todo) => {
   const ul = document.createElement("ul");
   ul.classList.add("group-list");
 
-  const html = `<li class="list-group">${todo}</li>`;
+  const newList = `<li class="list-group">
+  ${todo}
+  <span>
+    <i class="fa-solid fa-check"></i>
+    <i class="fa-solid fa-trash-can"></i>
+  </span>
+  </li>`;
 
-  ul.innerHTML += html;
+  ul.innerHTML += newList;
   main.appendChild(ul);
+
+  // DELETING A TASK
 };
